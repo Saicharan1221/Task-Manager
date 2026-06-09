@@ -1,0 +1,288 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+            135deg,
+            #667eea,
+            #764ba2
+    );
+    padding:20px;
+}
+
+.container{
+    width:100%;
+    max-width:1000px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+
+.hero-section{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.subtitle{
+    color:#666;
+    font-size:15px;
+    margin-top:10px;
+    margin-bottom:20px;
+}
+
+.person-container{
+    display:flex;
+    justify-content:center;
+    align-items:flex-end;
+    gap:40px;
+    margin-bottom:25px;
+}
+
+/* PERSON */
+
+.person{
+    position:relative;
+    width:90px;
+    height:150px;
+    animation:floatPerson 3s ease-in-out infinite;
+}
+
+.head{
+    width:38px;
+    height:38px;
+    background:#f4c27a;
+    border-radius:50%;
+    position:absolute;
+    left:26px;
+    top:0;
+}
+
+.body{
+    width:40px;
+    height:60px;
+    background:#4f46e5;
+    position:absolute;
+    left:25px;
+    top:38px;
+    border-radius:10px;
+}
+
+.left-arm,
+.right-arm{
+    width:30px;
+    height:8px;
+    background:#f4c27a;
+    position:absolute;
+    top:58px;
+}
+
+.left-arm{
+    left:0;
+    transform:rotate(25deg);
+}
+
+.right-arm{
+    right:0;
+    transform:rotate(-25deg);
+}
+
+.left-leg,
+.right-leg{
+    width:8px;
+    height:45px;
+    background:#1e293b;
+    position:absolute;
+    top:95px;
+}
+
+.left-leg{
+    left:30px;
+}
+
+.right-leg{
+    left:50px;
+}
+
+/* TASK BOARD */
+
+.task-board{
+    width:220px;
+    background:white;
+    padding:18px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+    animation:floatBoard 3s ease-in-out infinite;
+}
+
+.board-title{
+    background:#667eea;
+    color:white;
+    padding:10px;
+    border-radius:10px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.task-line{
+    height:12px;
+    background:#e5e7eb;
+    border-radius:10px;
+    margin-bottom:12px;
+}
+
+.short{
+    width:70%;
+}
+
+.progress{
+    height:12px;
+    background:#ddd;
+    border-radius:10px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:75%;
+    height:100%;
+    background:#22c55e;
+}
+
+h1{
+    color:#222;
+    margin-bottom:10px;
+    font-size:45px;
+}
+
+/* INPUT */
+
+.input-section{
+    display:flex;
+    gap:12px;
+    margin-bottom:25px;
+}
+
+.input-section input{
+    flex:1;
+    padding:15px;
+    border:2px solid #ddd;
+    border-radius:12px;
+    font-size:16px;
+}
+
+.input-section button{
+    background:#667eea;
+    color:white;
+    border:none;
+    padding:15px 25px;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.input-section button:hover{
+    background:#5568d8;
+}
+
+/* TASKS */
+
+#taskList{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.task-item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#f8f9fa;
+    padding:18px;
+    border-radius:12px;
+    border-left:5px solid #667eea;
+}
+
+.task-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.completed{
+    text-decoration:line-through;
+    color:gray;
+}
+
+.action-buttons{
+    display:flex;
+    gap:10px;
+}
+
+.edit-btn{
+    background:#f4a261;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.delete-btn{
+    background:#e63946;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+.edit-btn:hover{
+    background:#e07d2c;
+}
+
+.delete-btn:hover{
+    background:#c1121f;
+}
+
+/* ANIMATIONS */
+
+@keyframes floatPerson{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatBoard{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(8px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}

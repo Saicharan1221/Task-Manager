@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <div class="hero-section">
+
+            <div class="person-container">
+
+                <div class="person">
+                    <div class="head"></div>
+                    <div class="body"></div>
+                    <div class="left-arm"></div>
+                    <div class="right-arm"></div>
+                    <div class="left-leg"></div>
+                    <div class="right-leg"></div>
+                </div>
+
+                <div class="task-board">
+
+                    <div class="board-title">
+                        TASKS
+                    </div>
+
+                    <div class="task-line"></div>
+                    <div class="task-line short"></div>
+
+                    <div class="progress">
+                        <div class="progress-fill"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <h1>Task Manager</h1>
+
+            <p class="subtitle">
+                Organize your daily tasks efficiently
+            </p>
+
+        </div>
+
+        <div class="input-section">
+
+            <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="Enter task..."
+            >
+
+            <button onclick="addTask()">
+                Add Task
+            </button>
+
+        </div>
+
+        <div id="taskList"></div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
